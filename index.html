@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Organize - Plataforma Deportiva Profesional</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container flex justify-between items-center">
+      <a href="index.html" class="logo"> Sport Organize</a>
+      
+      <!-- Agregamos la clase protected-link a las funciones restringidas -->
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="tournaments.html">Torneos</a>
+        <a href="create.html" class="protected-link">Crear Torneo</a>
+        <a href="teams.html" class="protected-link">Equipos y Jugadores</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+
+      <div class="nav-auth">
+        <a href="login.html" class="login-link">Iniciar Sesión</a>
+        <a href="register.html" class="btn btn-primary">Registrarse</a>
+      </div>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu container" id="mobileMenu">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="tournaments.html">Torneos</a>
+      <a href="create.html" class="protected-link">Crear Torneo</a>
+      <a href="teams.html" class="protected-link">Equipos y Jugadores</a>
+      <a href="contact.html">Contacto</a>
+      <hr style="border-color: #374151;">
+      <a href="login.html">Iniciar Sesión</a>
+      <a href="register.html">Registrarse</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container grid-2 items-center">
+        <div>
+          <h1>Sport Organize</h1>
+          <h2>Tu plataforma deportiva profesional</h2>
+          <p class="mb-8" style="font-size: 1.125rem; color: #d1d5db;">
+            Organiza, gestiona y disfruta de torneos deportivos con la plataforma más completa y fácil de usar. Crea torneos personalizados, administra equipos y participantes, y lleva el control de todos tus eventos deportivos en un solo lugar.
+          </p>
+          <div class="flex gap-4" style="flex-wrap: wrap;">
+            <a href="create.html" class="btn btn-primary protected-link"> Crear Torneo</a>
+            <a href="register.html" class="btn btn-green"> Registrarse</a>
+          </div>
+        </div>
+        <div class="hero-img-wrapper">
+          <div class="hero-glow"></div>
+          <img src="img/logo.png" alt="Logo Sport Organize" class="hero-logo-right">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

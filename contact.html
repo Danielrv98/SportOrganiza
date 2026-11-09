@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Sport Organize</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container flex justify-between items-center">
+      <a href="index.html" class="logo"> Sport Organize</a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="tournaments.html">Torneos</a>
+        <a href="create.html">Crear Torneo</a>
+        <a href="teams.html">Equipos y Jugadores</a>
+        <a href="contact.html" class="active">Contacto</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <main style="background-color: var(--light); padding: 4rem 0;">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h1 class="text-dark">Contáctanos</h1>
+        <p class="text-gray mt-4" style="font-size: 1.125rem;">Estamos aquí para ayudarte con la organización de tus torneos</p>
+      </div>
+
+      <div class="grid-3 mb-8">
+        <div class="card text-center">
+          <h3 class="mb-4"> Teléfono</h3>
+          <p class="mb-4"><a href="tel:3503349255" class="text-gray hover:text-primary">350 334 9255</a></p>
+          <p><a href="tel:3132327907" class="text-gray hover:text-primary">313 232 7907</a></p>
+        </div>
+        <div class="card text-center">
+          <h3 class="mb-4"> Ubicación</h3>
+          <p class="text-gray">Soacha, Cundinamarca, Colombia</p>
+        </div>
+        <div class="card text-center">
+          <h3 class="mb-4"> Email</h3>
+          <p><a href="mailto:info@sportorganize.com" class="text-gray hover:text-primary">info@sportorganize.com</a></p>
+        </div>
+      </div>
+
+      <div class="card" style="max-width: 48rem; margin: 0 auto;">
+        <h2 class="text-dark mb-4 text-center">Envíanos un mensaje</h2>
+        <form>
+          <div class="grid-2" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Asunto</label>
+            <input type="text" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mensaje</label>
+            <textarea class="form-control" rows="6" required></textarea>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary"> Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

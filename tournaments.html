@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Torneos Disponibles - Sport Organize</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container flex justify-between items-center">
+      <a href="index.html" class="logo"> Sport Organize</a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="tournaments.html" class="active">Torneos</a>
+        <a href="create.html">Crear Torneo</a>
+        <a href="teams.html">Equipos y Jugadores</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <div class="nav-auth">
+        <a href="login.html" class="login-link">Iniciar Sesión</a>
+        <a href="register.html" class="btn btn-primary">Registrarse</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <main style="background-color: var(--light); padding-bottom: 5rem;">
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Torneos Disponibles</h1>
+        <p style="color: #9ca3af; font-size: 1.125rem;">Encuentra y únete a los mejores torneos deportivos</p>
+      </div>
+    </section>
+
+    <div class="container" style="margin-top: -3rem;">
+      <div class="card mb-8">
+        <h3 class="mb-4 text-dark flex items-center gap-4"> Filtros de Búsqueda</h3>
+        <div class="grid-3">
+          <input type="text" id="searchTournament" class="form-control" placeholder="Buscar torneos...">
+          <select id="sportFilter" class="form-control">
+            <option value="all">Todos los deportes</option>
+            <option value="futbol">Fútbol</option>
+            <option value="baloncesto">Baloncesto</option>
+            <option value="voleibol">Voleibol</option>
+            <option value="tenis">Tenis</option>
+            <option value="padel">Padel</option>
+          </select>
+          <select id="statusFilter" class="form-control">
+            <option value="all">Todos los estados</option>
+            <option value="activo">En curso</option>
+            <option value="proximamente">Próximamente</option>
+            <option value="finalizado">Finalizados</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-3" id="tournamentsGrid">
+        <div class="card tournament-card" data-title="Copa Primavera 2026" data-sport="futbol" data-status="activo" style="padding: 1.5rem;">
+          <div class="card-img"></div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="badge badge-orange">Fútbol</span>
+            <span class="badge badge-green">En curso</span>
+          </div>
+          <h3 class="text-dark mb-4">Copa Primavera 2026</h3>
+          <div class="text-gray mb-4" style="font-size: 0.875rem;">
+            <p>Soacha, Cundinamarca</p>
+            <p>8/16 participantes</p>
+          </div>
+          <a href="#" class="btn btn-outline" style="width: 100%;">Ver detalles →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

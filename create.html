@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Torneo - Sport Organize</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container flex justify-between items-center">
+      <a href="index.html" class="logo"> Sport Organize</a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="tournaments.html">Torneos</a>
+        <a href="create.html" class="active">Crear Torneo</a>
+        <a href="teams.html">Equipos y Jugadores</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <main style="background-color: var(--light); padding-bottom: 5rem;">
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Crear Nuevo Torneo</h1>
+        <p style="color: #9ca3af; font-size: 1.125rem;">Configura tu torneo y empieza a recibir participantes</p>
+      </div>
+    </section>
+
+    <div class="container" style="margin-top: -3rem; max-width: 60rem;">
+      <div class="card">
+        <form>
+          <h3 class="text-dark mb-4"> Información Básica</h3>
+          <div class="grid-2" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Nombre del Torneo *</label>
+              <input type="text" class="form-control" placeholder="ej. Copa Primavera 2026" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Deporte *</label>
+              <select class="form-control" required>
+                <option value="">Seleccionar...</option>
+                <option>Fútbol</option><option>Baloncesto</option>
+                <option>Voleibol</option><option>Tenis</option>
+                <option>Fútbol Sala</option><option>Padel</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Descripción *</label>
+            <textarea class="form-control" rows="5" placeholder="Describe tu torneo..." required></textarea>
+          </div>
+          
+          <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 2rem 0;">
+
+          <h3 class="text-dark mb-4"> Fechas y Ubicación</h3>
+          <div class="grid-2" style="gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Fecha de Inicio *</label>
+              <input type="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Fecha de Fin *</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label"> Ubicación *</label>
+            <input type="text" class="form-control" placeholder="ej. Soacha, Cundinamarca" required>
+          </div>
+
+          <div class="flex gap-4 items-center mt-4">
+            <button type="submit" class="btn btn-primary">✓ Crear Torneo</button>
+            <a href="tournaments.html" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

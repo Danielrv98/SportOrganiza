@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipos y Jugadores - Sport Organize</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-color: var(--dark); color: var(--white);">
+  <nav class="navbar">
+    <div class="container flex justify-between items-center">
+      <a href="index.html" class="logo"> Sport Organize</a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="tournaments.html">Torneos</a>
+        <a href="create.html">Crear Torneo</a>
+        <a href="teams.html" class="active">Equipos y Jugadores</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </nav>
+
+  <main class="teams-layout">
+    <div class="container">
+      <h1 class="mb-4 text-white">Gestión de Equipos y Jugadores</h1>
+      <p style="color: #9ca3af;">Administra tus equipos y sus jugadores</p>
+
+      <div class="teams-grid">
+        <div class="panel">
+          <div class="flex justify-between items-center mb-4">
+            <h3> Equipos</h3>
+            <button id="addTeamBtn" class="btn btn-primary" style="padding: 0.5rem 1rem;">+</button>
+          </div>
+          
+          <div id="addTeamForm" style="display: none; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-btn); margin-bottom: 1rem;">
+            <div class="form-group">
+              <input type="text" id="newTeamName" class="form-control dark-input" placeholder="Nombre del equipo">
+            </div>
+            <div class="flex gap-4">
+              <input type="text" id="newTeamEmoji" class="form-control dark-input" placeholder="Emoji" maxlength="2" style="width: 80px;">
+              <button id="newTeamSubmit" class="btn btn-primary" style="flex: 1;">Guardar</button>
+            </div>
+          </div>
+
+          <div id="teamsList" style="max-height: 500px; overflow-y: auto;"></div>
+        </div>
+
+        <div class="panel">
+          <div id="emptyState" class="text-center" style="padding: 5rem 0; color: #9ca3af;">
+            <p>Selecciona un equipo para ver sus jugadores...</p>
+          </div>
+
+          <div id="teamDetailPanel" style="display: none;">
+            <div class="flex items-center gap-4 mb-8">
+              <span id="detailTeamEmoji" style="font-size: 3rem;"></span>
+              <div>
+                <h2 id="detailTeamName"></h2>
+                <p id="detailPlayerCount" style="color: #9ca3af;"></p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mb-4">
+              <h3> Jugadores</h3>
+              <button id="addPlayerBtn" class="btn btn-primary" style="padding: 0.5rem 1rem;">Agregar Jugador</button>
+            </div>
+
+            <div id="addPlayerForm" style="display: none; grid-template-columns: 2fr 1fr 1fr auto; gap: 1rem; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-btn); margin-bottom: 1rem;">
+              <input type="text" id="newPlayerName" class="form-control dark-input" placeholder="Nombre">
+              <input type="text" id="newPlayerPos" class="form-control dark-input" placeholder="Posición">
+              <input type="number" id="newPlayerNum" class="form-control dark-input" placeholder="Número">
+              <button id="newPlayerSubmit" class="btn btn-primary">✓</button>
+            </div>
+
+            <div id="playersList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
